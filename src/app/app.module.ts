@@ -17,7 +17,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
 		{ path: '', redirectTo:'home', pathMatch:'full'},
-		{ path: 'calendar', component: CalendarComponent}
+		{ path: 'calendar', component: CalendarComponent, data:{breadcrumb: "Calendar"}}
 ];
 
 @NgModule({

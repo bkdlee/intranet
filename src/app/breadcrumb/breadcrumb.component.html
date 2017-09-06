@@ -1,5 +1,6 @@
 <nz-breadcrumb class="breadcrumb">
-  <nz-breadcrumb-item>Home</nz-breadcrumb-item>
-  <nz-breadcrumb-item>List</nz-breadcrumb-item>
-  <nz-breadcrumb-item>App</nz-breadcrumb-item>
+  <nz-breadcrumb-item><a routerLink="">Home</a></nz-breadcrumb-item>
+  <nz-breadcrumb-item *ngFor="let breadcrumb of breadcrumbs">
+    <a [routerLink]="[breadcrumb.url, breadcrumb.params]">{{ breadcrumb.label }}</a>
+  </nz-breadcrumb-item>
 </nz-breadcrumb>

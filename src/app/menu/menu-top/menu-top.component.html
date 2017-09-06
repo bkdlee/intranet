@@ -1,5 +1,5 @@
 <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" class="topmenu">
-	<li nz-menu-item *ngFor="let item of menu_items" >
-		<a [routerLink]="['/' + item.link]" target="{{item.target}}">{{item.title}}</a>
+	<li nz-menu-item *ngFor="let item of menu_items; let i = index" [nzSelected]="i?false:true">
+		<a [routerLink]="['/' + item.link]">{{item.title}}</a>
 	</li>
 </ul>

@@ -19,15 +19,10 @@ import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
-		{ path: '', redirectTo:'home', pathMatch:'full'},
-		{ path: 'calendar', component: CalendarComponent, data:{breadcrumb: "Calendar"}}
-=======
 	{ path: '', redirectTo:'home', pathMatch:'full'},
 	{ path: 'home', component: HomeComponent},
-	{ path: 'calendar', component: CalendarComponent},
+	{ path: 'calendar', component: CalendarComponent, data:{breadcrumb: "Calendar"}},
 	{ path: 'map', component: MapComponent}
->>>>>>> 1274d536a814535ea35c2c1eae5c4e2ab8070d68
 ];
 
 @NgModule({

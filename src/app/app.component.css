@@ -1,0 +1,32 @@
+.logo  {
+	background-color: #fff;
+	background-image: url('/assets/images/isl_logo.png');
+	background-size: 100% 100%;
+	width: 120px;
+	height: 64px;
+	margin: 0px 28px 0px 0;
+	float: left;
+}
+.header{
+	overflow: hidden;
+}
+.content{
+	padding: 0 24px;
+	min-height: 280px;
+}
+.footer{
+	text-align: center;
+}
+.main{
+	background: #fff;
+	padding:24px 0;
+}
+.content-panel{
+	padding:0 50px;
+}
+.login-box{
+	float: right;
+	position: relative;
+	top: -54px;
+	right: 0px;
+}

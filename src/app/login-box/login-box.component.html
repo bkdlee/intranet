@@ -1,0 +1,35 @@
+<nz-avatar nzSize="large" nzIcon="user" (click)="showModal()" class="user"></nz-avatar>
+<nz-modal [nzVisible]="isVisible" [nzTitle]="'Please Login'" [nzContent]="modalContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)" [nzConfirmLoading]="isConfirmLoading" [nzOkText]="'Login'" [nzCancelText]="'Cancel'" [nzWidth]="300">
+	<ng-template #modalContent>
+		<form nz-form [formGroup]="validateForm" (ngSubmit)="_submitForm()">
+			<div nz-form-item>
+				<div nz-form-control [nzValidateStatus]="validateForm.controls.userName">
+					<nz-input formControlName="userName" [nzPlaceHolder]="'Username'" [nzSize]="'large'">
+						<ng-template #prefix>
+							<i class="anticon anticon-user"></i>
+						</ng-template>
+					</nz-input>
+					<div nz-form-explain *ngIf="validateForm.controls.userName.dirty&&validateForm.controls.userName.hasError('required')">Please input your username!</div>
+				</div>
+			</div>
+			<div nz-form-item>
+				<div nz-form-control [nzValidateStatus]="validateForm.controls.password">
+					<nz-input formControlName="password" [nzType]="'password'" [nzPlaceHolder]="'Password'" [nzSize]="'large'">
+						<ng-template #prefix>
+							<i class="anticon anticon-lock"></i>
+						</ng-template>
+					</nz-input>
+					<div nz-form-explain *ngIf="validateForm.controls.password.dirty&&validateForm.controls.password.hasError('required')">Please input your Password!</div>
+				</div>
+			</div>
+			<div nz-form-item>
+				<div nz-form-control>
+					<label nz-checkbox formControlName="remember">
+						<span>Remember me</span>
+					</label>
+					<a class="login-form-forgot" class="login-form-forgot">Forgot password</a>
+				</div>
+			</div>
+		</form>
+	</ng-template>
+</nz-modal>

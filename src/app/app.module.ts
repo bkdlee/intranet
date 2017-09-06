@@ -13,15 +13,11 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginBoxComponent } from './login-box/login-box.component';
 import { MenuTopComponent } from './menu/menu-top/menu-top.component';
 import { MenuSideComponent } from './menu/menu-side/menu-side.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
 		{ path: '', redirectTo:'home', pathMatch:'full'},
-		/*
-		{ path: 'home', redirectTo:'home', HomeComponet},
-		{ path: 'home', redirectTo:'home', HomeComponet},
-		{ path: 'home', redirectTo:'home', HomeComponet},
-		{ path: 'home', redirectTo:'home', HomeComponet},
-	*/
+		{ path: 'calendar', component: CalendarComponent}
 ];
 
 @NgModule({
@@ -32,7 +28,8 @@ const routes: Routes = [
 				FooterComponent,
 				LoginBoxComponent,
 				MenuTopComponent,
-				MenuSideComponent
+				MenuSideComponent,
+				CalendarComponent
 		],
 		imports: [
 				BrowserModule,

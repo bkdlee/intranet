@@ -8,14 +8,15 @@ import { Menu } from '../menu.model';
 })
 export class MenuTopComponent implements OnInit {
 	menu_items: Menu[];
+
 	constructor() { 
 		this.menu_items = [
 			new Menu("Home", ""),
-			new Menu("Calendar", "calendar/"),
-			new Menu("Contact List", "contact-list/"),
-			new Menu("Gallery", "gallery/"),
-			new Menu("My Page", "my-page/"),
-			new Menu("Map", "map/"),
+			new Menu("Calendar", "calendar"),
+			new Menu("Contact List", "contact-list"),
+			new Menu("Gallery", "gallery"),
+			new Menu("My Page", "my-page"),
+			new Menu("Map", "map"),
 		];
 	}
 

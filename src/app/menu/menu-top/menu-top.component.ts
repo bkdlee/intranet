@@ -21,7 +21,6 @@ export class MenuTopComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		
 	}
 
 }

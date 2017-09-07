@@ -17,12 +17,18 @@ import { MenuSideComponent } from './menu/menu-side/menu-side.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { MyPageComponent } from './my-page/my-page.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo:'home', pathMatch:'full'},
 	{ path: 'home', component: HomeComponent},
 	{ path: 'calendar', component: CalendarComponent, data:{breadcrumb: "Calendar"}},
-	{ path: 'map', component: MapComponent}
+	{ path: 'contact-list', component: ContactListComponent, data:{breadcrumb: "Contact List"}},
+	{ path: 'gallery', component: GalleryComponent, data:{breadcrumb: "Gallery"}},
+	{ path: 'my-page', component: MyPageComponent, data:{breadcrumb: "My Page"}},
+	{ path: 'map', component: MapComponent, data:{breadcrumb: "Map"}}
 ];
 
 @NgModule({
@@ -36,7 +42,10 @@ const routes: Routes = [
 		MenuSideComponent,
 		CalendarComponent,
 		MapComponent,
-		HomeComponent
+		HomeComponent,
+		ContactListComponent,
+		GalleryComponent,
+		MyPageComponent
 	],
 	imports: [
 		BrowserModule,

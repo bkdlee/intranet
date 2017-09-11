@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { NguiMapModule} from '@ngui/map';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 import { AppComponent } from './app.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
@@ -55,7 +56,9 @@ const routes: Routes = [
 		BrowserAnimationsModule,
 		NgZorroAntdModule.forRoot(),
 		RouterModule.forRoot(routes),
-		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js'})
+		NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js'}),
+		FroalaEditorModule.forRoot(), 
+		FroalaViewModule.forRoot()
 	],
 	providers: [],
 	bootstrap: [AppComponent]

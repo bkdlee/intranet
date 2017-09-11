@@ -23,10 +23,10 @@ export class HomeComponent implements OnInit {
 		this.greeting = this.getGreeting(hour);
 		this.text_time = this.getRoughTime(hour, min);
 
-		// show Global Time.
-		this.timelist = this.getGlobalTime();
+		// show Global Clock.
+		this.timelist = this.getGlobalClock();
 		setInterval(()=>{
-			this.timelist = this.getGlobalTime()
+			this.timelist = this.getGlobalClock()
 		}, 1000);
 		this.asset_track_website = this.getAssetTrackWebiste();
 	}
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
 			case 2:
 			case 58:
 			case 59:
-				text_min = hour + " 0'clock";
+				text_min = hour + " O'clock";
 				break;
 			case 3:
 			case 4:
@@ -171,28 +171,17 @@ export class HomeComponent implements OnInit {
 		return text_time[last_digi];
 	}
 
-	private getGlobalTime(){
-
+	private getGlobalClock(){
 		// use moment
-		let today = moment(); // today date
+		let now = moment(); // Now
 		let timelist: any[];
-		timelist = [{
-			"name": "Jamaica",
-			"time": today.tz("America/Jamaica").format('YYYY-MM-DD HH:mm:ss')
-		},{
-			"name": "Eastern",
-			"time": today.tz("America/New_York").format('YYYY-MM-DD HH:mm:ss')
-		},{
-			"name": "London",
-			"time": today.tz("Europe/London").format('YYYY-MM-DD HH:mm:ss')
-		},{
-			"name": "Sydney",
-			"time": today.tz("Australia/Sydney").format('YYYY-MM-DD HH:mm:ss')
-		},{
-			"name": "Auckland",
-			"time": today.tz("Pacific/Auckland").format('YYYY-MM-DD HH:mm:ss')
-		}];
-		//this.timelist = timelist;
+		timelist = [
+			{"name": "Jamaica","time": now.tz("America/Jamaica").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "Eastern","time": now.tz("America/New_York").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "London","time": now.tz("Europe/London").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "Sydney","time": now.tz("Australia/Sydney").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "Auckland","time": now.tz("Pacific/Auckland").format('YYYY-MM-DD HH:mm:ss')}
+		];
 		return timelist;
 	}
 

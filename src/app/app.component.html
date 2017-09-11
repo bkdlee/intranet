@@ -7,7 +7,7 @@
 	<nz-content class="content-panel">
 		<app-breadcrumb></app-breadcrumb>
 		<nz-layout class="main">
-			<nz-sider [nzWidth]="200">
+			<nz-sider [nzWidth]="200" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzBreakpoint]="'lg'">
 				<app-menu-side></app-menu-side>
 			</nz-sider>
 			<nz-content class="content">

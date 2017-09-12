@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { MyPageComponent } from './my-page/my-page.component';
+import { ArticleComponent } from './article/article.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo:'home', pathMatch:'full'},
@@ -46,7 +47,8 @@ const routes: Routes = [
 		HomeComponent,
 		ContactListComponent,
 		GalleryComponent,
-		MyPageComponent
+		MyPageComponent,
+		ArticleComponent
 	],
 	imports: [
 		BrowserModule,

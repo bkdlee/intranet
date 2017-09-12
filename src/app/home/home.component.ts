@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
 		this.asset_track_website = this.getAssetTrackWebiste();
 	}
 
-	private getAssetTrackWebiste(){
+	private getAssetTrackWebiste(): Array<Object> {
 		let website: any[];
 		website = [
 			{"name": "Fonterra Brands (Anchor)","url":"http://www.assettrack.co.nz/anchor/"},
@@ -39,10 +39,11 @@ export class HomeComponent implements OnInit {
 			{"name": "Red Bull", "url": "http://www.assettrack.co.nz/rbnz/"},
 			{"name": "Nestle", "url": "http://www.assettrack.co.nz/nestle/"}
 		];
+
 		return website;
 	}
 
-	private getRoughTime(hour: number, min: number){
+	private getRoughTime(hour: number, min: number): string {
 		let text_time: string;
 		let text_hour: string;
 		text_time = "It's ";
@@ -51,10 +52,11 @@ export class HomeComponent implements OnInit {
 		text_time += this.getRoughTimePrefix( parseInt(last_digi) );
 		text_hour = this.getRoughHour(hour, min);
 		text_time += this.getRoughMin(min, text_hour);
+
 		return text_time;
 	}
 
-	private getRoughMin(min: number, hour: string){
+	private getRoughMin(min: number, hour: string): string {
 		let text_min: string;
 		switch( min ){
 			case 0:
@@ -145,7 +147,7 @@ export class HomeComponent implements OnInit {
 		return text_min;
 	}
 
-	private getRoughHour(hour: number, min: number){
+	private getRoughHour(hour: number, min: number): string {
 		let text_h12: number;
 		let text_hour = ["twelve", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
 		
@@ -160,7 +162,7 @@ export class HomeComponent implements OnInit {
 		return text_hour[text_h12];
 	}
 
-	private getRoughTimePrefix(last_digi: number){
+	private getRoughTimePrefix(last_digi: number): string {
 		let text_time = [];
 		text_time[1] = text_time[6] = "just gone ";
 		text_time[2] = text_time[7] = "a little after ";
@@ -171,7 +173,7 @@ export class HomeComponent implements OnInit {
 		return text_time[last_digi];
 	}
 
-	private getGlobalClock(){
+	private getGlobalClock(): Array<Object>{
 		// use moment
 		let now = moment(); // Now
 		let timelist: any[];
@@ -185,7 +187,7 @@ export class HomeComponent implements OnInit {
 		return timelist;
 	}
 
-	private getGreeting(hour:number){
+	private getGreeting(hour:number): string{
 		let greeting: string;
 		if ( hour >= 0 && hour <= 11 ){
 			greeting = "Good morning ";

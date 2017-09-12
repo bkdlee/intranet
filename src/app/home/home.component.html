@@ -1,6 +1,5 @@
-<section style="padding: 5px;">
-	<div nz-row [nzGutter]="8" [nzType]="flex">
-		<div nz-col [nzSpan]="8" [nzXs]="24" [nzSm]="12" [nzLg]="11" [nzXl]="10">
+	<div nz-row [nzGutter]="8">
+		<div nz-col [nzSpan]="24" [nzXs]="24" [nzSm]="12" [nzLg]="11" [nzXl]="10">
 			<nz-card>
 				<ng-template #title>
 					{{greeting}}
@@ -8,7 +7,7 @@
 				<ng-template #body>
 					<p><strong>{{text_time}}</strong></p>
 					<p>&nbsp;</p>
-					<nz-table #nzTable [nzDataSource]="timelist" [nzPageSize]="5" [nzIsPagination]="false">
+					<nz-table #nzTable [nzDataSource]="timelist" [nzPageSize]="5" [nzIsPagination]="false" [nzSize]="'middle'">
 						<thead nz-thead>
 						<tr>
 							<th nz-th><span>City</span></th>
@@ -25,7 +24,7 @@
 				</ng-template>
 			</nz-card>
 		</div>
-		<div nz-col [nzSpan]="8" [nzXs]="24" [nzSm]="8" [nzLg]="8" [nzXl]="8">
+		<div nz-col [nzSpan]="24" [nzXs]="24" [nzSm]="8" [nzLg]="8" [nzXl]="8">
 			<nz-card>
 				<ng-template #title>
 					Calendar Events
@@ -38,7 +37,7 @@
 				</ng-template>
 			</nz-card>
 		</div>
-		<div nz-col [nzSpan]="8" [nzXs]="24" [nzSm]="4" [nzLg]="5" [nzXl]="6">
+		<div nz-col [nzSpan]="24" [nzXs]="24" [nzSm]="4" [nzLg]="5" [nzXl]="6">
 			<nz-card>
 				<ng-template #title>
 					Asset Track
@@ -51,11 +50,12 @@
 			</nz-card>
 		</div>
 	</div>
-	<nz-card>
-		<ng-template #body>
-			<p>Please report any errors/broken links, etc.</p>
-		</ng-template>
-	</nz-card>
-
-	
-</section>
+	<div nz-row [nzGutter]="8">
+		<div nz-col [nzSpan]="24" [nzXs]="24" [nzSm]="24" [nzLg]="24" [nzXl]="24">
+			<nz-card>
+				<ng-template #body>
+					<p>Please report any errors/broken links, etc.</p>
+				</ng-template>
+			</nz-card>
+		</div>
+	</div>

@@ -6,18 +6,8 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
-	public options: Object = {
-		placeholderText: 'Edit Your Content Here!',
-		initOnClick: true
-		//editInPopup: true
-		//charCounterCount: false
-	}
 
 	constructor() { }
-
-	private edit(){
-
-	}
 
 	ngOnInit() {
 

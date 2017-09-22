@@ -1,8 +1,6 @@
 .logo  {
-	background-color: #fff;
-	background-image: url('/assets/images/isl_logo.png');
-	background-size: 100% 100%;
-	width: 120px;
+	background: url('/assets/images/cherries_color.png') center center no-repeat;
+	width: 128px;
 	height: 64px;
 	margin: 0px 28px 0px 0;
 	float: left;

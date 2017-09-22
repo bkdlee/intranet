@@ -7,8 +7,8 @@
 	<nz-content class="content-panel">
 		<app-breadcrumb></app-breadcrumb>
 		<nz-layout class="main">
-			<nz-sider [nzWidth]="200" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzBreakpoint]="'lg'">
-				<app-menu-side [isCollapsed]="isCollapsed"></app-menu-side>
+			<nz-sider [nzWidth]="200" nzCollapsible [(nzCollapsed)]="is_collapsed" [nzBreakpoint]="'lg'">
+				<app-menu-side [is_collapsed]="is_collapsed"></app-menu-side>
 			</nz-sider>
 			<nz-content class="content">
 				<router-outlet></router-outlet>

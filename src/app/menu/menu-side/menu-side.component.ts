@@ -7,7 +7,7 @@ import { Menu } from '../menu.model';
 	styleUrls: ['./menu-side.component.css']
 })
 export class MenuSideComponent implements OnInit {
-	@Input() isCollapsed = true;
+	@Input() is_collapsed = true;
 	
 	constructor() {
 	}

@@ -21,6 +21,10 @@
 .content{
 	padding:24px;
 }
+:host ::ng-deep h1{
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 8px;
+}
 :host ::ng-deep .content-panel{
 	padding:0 50px;
 }

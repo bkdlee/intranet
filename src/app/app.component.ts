@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'Intranet';
-	isCollapsed = false;
+	is_collapsed = false;
 
 	constructor(){
-		this.isCollapsed = false;
+		this.is_collapsed = false;
 	};
 }

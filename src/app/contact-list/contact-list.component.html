@@ -1,1 +1,20 @@
 <h1>Contact List</h1>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzSpan]="12" [nzXs]="24" [nzMd]="12" *ngFor="let personal of contacts">
+		<nz-card>
+			<ng-template #title>
+				{{personal.name}}
+			</ng-template>
+			<ng-template #body>
+				<div nz-row>
+					<div nz-col [nzSpan]="4">
+						<nz-avatar [nzShape]="'square'" nzSize="large" nzIcon="user"></nz-avatar>
+					</div>
+					<div nz-col [nzSpan]="20">
+						
+					</div>
+				</div>
+			</ng-template>
+		</nz-card>
+	</div>
+</div>

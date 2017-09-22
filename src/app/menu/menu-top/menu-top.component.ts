@@ -11,12 +11,12 @@ export class MenuTopComponent implements OnInit {
 
 	constructor() { 
 		this.menu_items = [
-			new Menu("Home", ""),
-			new Menu("Calendar", "calendar"),
-			new Menu("Contact List", "contact-list"),
-			new Menu("Gallery", "gallery"),
-			new Menu("My Page", "my-page"),
-			new Menu("Map", "map"),
+			new Menu("Home", "", "anticon-home"),
+			new Menu("Calendar", "calendar", "anticon-calendar"),
+			new Menu("Contact List", "contact-list", "anticon-contacts"),
+			new Menu("Gallery", "gallery", "anticon-picture"),
+			new Menu("My Page", "my-page", "anticon-heart-o"),
+			new Menu("Map", "map", "anticon-environment-o"),
 		];
 	}
 

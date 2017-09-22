@@ -10,6 +10,6 @@ export class AppComponent {
 	isCollapsed = false;
 
 	constructor(){
-
+		this.isCollapsed = false;
 	};
 }

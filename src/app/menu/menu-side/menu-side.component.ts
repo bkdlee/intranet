@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Menu } from '../menu.model';
 
 @Component({
@@ -7,8 +7,10 @@ import { Menu } from '../menu.model';
 	styleUrls: ['./menu-side.component.css']
 })
 export class MenuSideComponent implements OnInit {
-	isCollapsed = false;
-	constructor() { }
+	@Input() isCollapsed = true;
+	
+	constructor() {
+	}
 
 	ngOnInit() {
 	}

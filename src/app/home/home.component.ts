@@ -178,11 +178,11 @@ export class HomeComponent implements OnInit {
 		let now = moment(); // Now
 		let timelist: any[];
 		timelist = [
+			{"name": "Auckland","time": now.tz("Pacific/Auckland").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "Sydney","time": now.tz("Australia/Sydney").format('YYYY-MM-DD HH:mm:ss')},
 			{"name": "Jamaica","time": now.tz("America/Jamaica").format('YYYY-MM-DD HH:mm:ss')},
 			{"name": "Eastern","time": now.tz("America/New_York").format('YYYY-MM-DD HH:mm:ss')},
 			{"name": "London","time": now.tz("Europe/London").format('YYYY-MM-DD HH:mm:ss')},
-			{"name": "Sydney","time": now.tz("Australia/Sydney").format('YYYY-MM-DD HH:mm:ss')},
-			{"name": "Auckland","time": now.tz("Pacific/Auckland").format('YYYY-MM-DD HH:mm:ss')}
 		];
 		return timelist;
 	}

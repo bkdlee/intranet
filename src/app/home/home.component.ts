@@ -20,14 +20,23 @@ export class HomeComponent implements OnInit {
 		let now 	= new Date();
 		let hour 	= now.getHours();
 		let min 	= now.getMinutes();
+
 		this.greeting = this.getGreeting(hour);
+		setInterval(()=>{
+			this.greeting = this.getGreeting(hour);
+		}, 14400000);
+		
 		this.text_time = this.getRoughTime(hour, min);
+		setInterval(()=>{
+			this.text_time = this.getRoughTime(hour, min);
+		}, 900000);
 
 		// show Global Clock.
 		this.timelist = this.getGlobalClock();
 		setInterval(()=>{
-			this.timelist = this.getGlobalClock()
+			this.timelist = this.getGlobalClock();
 		}, 1000);
+
 		this.asset_track_website = this.getAssetTrackWebiste();
 	}
 

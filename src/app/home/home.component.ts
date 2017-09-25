@@ -17,18 +17,14 @@ export class HomeComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
-		let now 	= new Date();
-		let hour 	= now.getHours();
-		let min 	= now.getMinutes();
-
-		this.greeting = this.getGreeting(hour);
+		this.greeting = this.getGreeting();
 		setInterval(()=>{
-			this.greeting = this.getGreeting(hour);
+			this.greeting = this.getGreeting();
 		}, 14400000);
 		
-		this.text_time = this.getRoughTime(hour, min);
+		this.text_time = this.getRoughTime();
 		setInterval(()=>{
-			this.text_time = this.getRoughTime(hour, min);
+			this.text_time = this.getRoughTime();
 		}, 900000);
 
 		// show Global Clock.
@@ -43,24 +39,26 @@ export class HomeComponent implements OnInit {
 	private getAssetTrackWebiste(): Array<Object> {
 		let website: any[];
 		website = [
-			{"name": "Fonterra Brands (Anchor)","url":"http://www.assettrack.co.nz/anchor/"},
-			{"name": "Quality Bakers","url": "http://www.assettrack.co.nz/qb/"},
-			{"name": "Red Bull", "url": "http://www.assettrack.co.nz/rbnz/"},
-			{"name": "Nestle", "url": "http://www.assettrack.co.nz/nestle/"}
+			{"name": "Fonterra Brands (Anchor)", 	"url": "http://www.assettrack.co.nz/anchor/"},
+			{"name": "Quality Bakers", 				"url": "http://www.assettrack.co.nz/qb/"},
+			{"name": "Red Bull", 					"url": "http://www.assettrack.co.nz/rbnz/"},
+			{"name": "Nestle", 						"url": "http://www.assettrack.co.nz/nestle/"},
 		];
 
 		return website;
 	}
 
-	private getRoughTime(hour: number, min: number): string {
-		let text_time: string;
-		let text_hour: string;
-		text_time = "It's ";
+	private getRoughTime(): string {
+		let now 	= new Date();
+		let hour 	= now.getHours();
+		let min 	= now.getMinutes();
 
+		let text_time: string;
 		let last_digi = min.toString().split('').pop();
-		text_time += this.getRoughTimePrefix( parseInt(last_digi) );
-		text_hour = this.getRoughHour(hour, min);
-		text_time += this.getRoughMin(min, text_hour);
+		
+		text_time = "It's " 
+					+ this.getRoughTimePrefix( parseInt(last_digi) ) 
+					+ this.getRoughMin(min, this.getRoughHour(hour, min));
 
 		return text_time;
 	}
@@ -187,16 +185,19 @@ export class HomeComponent implements OnInit {
 		let now = moment(); // Now
 		let timelist: any[];
 		timelist = [
-			{"name": "Auckland","time": now.tz("Pacific/Auckland").format('YYYY-MM-DD HH:mm:ss')},
-			{"name": "Sydney","time": now.tz("Australia/Sydney").format('YYYY-MM-DD HH:mm:ss')},
-			{"name": "Jamaica","time": now.tz("America/Jamaica").format('YYYY-MM-DD HH:mm:ss')},
-			{"name": "Eastern","time": now.tz("America/New_York").format('YYYY-MM-DD HH:mm:ss')},
-			{"name": "London","time": now.tz("Europe/London").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "Auckland",	"time": now.tz("Pacific/Auckland").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "Sydney",		"time": now.tz("Australia/Sydney").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "Jamaica",		"time": now.tz("America/Jamaica").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "Eastern",		"time": now.tz("America/New_York").format('YYYY-MM-DD HH:mm:ss')},
+			{"name": "London",		"time": now.tz("Europe/London").format('YYYY-MM-DD HH:mm:ss')},
 		];
 		return timelist;
 	}
 
-	private getGreeting(hour:number): string{
+	private getGreeting(): string{
+		let now 	= new Date();
+		let hour 	= now.getHours();
+
 		let greeting: string;
 		if ( hour >= 0 && hour <= 11 ){
 			greeting = "Good morning ";
@@ -207,6 +208,7 @@ export class HomeComponent implements OnInit {
 		} else{
 			greeting = " Welcome back ";
 		}
+		
 		return greeting;
 	}
 

@@ -20,18 +20,19 @@ export class HomeComponent implements OnInit {
 		this.greeting = this.getGreeting();
 		setInterval(()=>{
 			this.greeting = this.getGreeting();
-		}, 14400000);
+		}, 14400000); // refresh every 4 hours
+
 		
 		this.text_time = this.getRoughTime();
 		setInterval(()=>{
 			this.text_time = this.getRoughTime();
-		}, 900000);
+		}, 300000); // refresh every 5 mins
 
 		// show Global Clock.
 		this.timelist = this.getGlobalClock();
 		setInterval(()=>{
 			this.timelist = this.getGlobalClock();
-		}, 1000);
+		}, 1000); // refresh every 1 second
 
 		this.asset_track_website = this.getAssetTrackWebiste();
 	}
@@ -208,7 +209,6 @@ export class HomeComponent implements OnInit {
 		} else{
 			greeting = " Welcome back ";
 		}
-		
 		return greeting;
 	}
 

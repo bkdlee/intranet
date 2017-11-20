@@ -15,6 +15,6 @@ export class Article {
 		public modified: Date,
 		public modified_by: number,
 		public ordering: number,
-		public hits: number
+		public hits: number,
 	){}
 }
